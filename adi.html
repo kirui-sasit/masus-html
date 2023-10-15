@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Adrian Kipruto Kirui</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .login-message {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Login</h1>
+    </header>
+
+    <section>
+        <div class="login-container">
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="button" onclick="login()">Login</button>
+            </form>
+            <p id="login-message" class="login-message"></p>
+        </div>
+    </section>
+
+    <script>
+         function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Replace these hardcoded values with your actual login credentials
+            var correctUsername = 'adrian kirui';
+            var correctPassword = '@Sasit4650';
+
+            if (username === correctUsername && password === correctPassword) {
+                document.getElementById('login-message').innerHTML = 'Login successful!';
+                // Redirect to the CV page or another page after successful login
+                window.location.href = 'cv.html';
+            } else {
+                document.getElementById('login-message').innerHTML = 'Incorrect username or password. Please try again.';
+            }
+        }
+
+        function recoverPassword() {
+            var email = 'adriankirui4@gmail.com'; // Replace with the actual recovery email
+            alert('A password recovery link has been sent to ' + email);
+            // Here, you would typically send a recovery email with a unique link
+        }
+    </script>
+
+</body>
+</html>
